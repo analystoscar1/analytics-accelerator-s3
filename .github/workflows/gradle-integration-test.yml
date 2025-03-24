@@ -47,12 +47,12 @@ jobs:
       with:
         gradle-version: 8.7
 
-    - name: Configure aws credentials
-      uses: aws-actions/configure-aws-credentials@v4.0.2
-      with:
-        role-to-assume: ${{ env.ROLE_TO_ASSUME }}
-        role-session-name: GitHub_to_AWS_via_FederatedOIDC
-        aws-region: ${{ env.S3_TEST_REGION }}
+#    - name: Configure aws credentials
+#      uses: aws-actions/configure-aws-credentials@v4.0.2
+#      with:
+#        role-to-assume: ${{ env.ROLE_TO_ASSUME }}
+#        role-session-name: GitHub_to_AWS_via_FederatedOIDC
+#       aws-region: ${{ env.S3_TEST_REGION }}
 
     - name: Build with Gradle Wrapper
       run: ./gradlew integrationTest
